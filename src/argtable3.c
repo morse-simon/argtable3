@@ -339,9 +339,6 @@ static void arg_parse_tagged(int argc, char** argv, struct arg_hdr** table, stru
 
 static int arg_parse_find_stop(int argc, char** argv, struct arg_hdr** table, struct arg_end* endtable) {
     int tabindex = 0;
-    int errorlast = 0;
-    const char* optarglast = NULL;
-    void* parentlast = NULL;
     while (!(table[tabindex]->flag & ARG_TERMINATOR))
     {
         void* parent;
@@ -367,20 +364,13 @@ static int arg_parse_find_stop(int argc, char** argv, struct arg_hdr** table, st
         if (errorcode == 0) {
             if (table[tabindex]->flag & ARG_STOPPARSE)
             {
-                return optind + 1;
+                return (optind + 1) > argc ? argc : (optind + 1);
             }
             /* success, move onto next argv[optind] but stay with same table[tabindex] */
             optind++;
-                        /* clear the last tentative error */
-            errorlast = 0;
         } else {
             /* failure, try same argv[optind] with next table[tabindex] entry */
             tabindex++;
-
-            /* remember this as a tentative error we may wish to reinstate later */
-            errorlast = errorcode;
-            optarglast = argv[optind];
-            parentlast = parent;
         }
     }
 
