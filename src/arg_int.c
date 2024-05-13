@@ -170,9 +170,6 @@ static int arg_int_scanfn(struct arg_int* parent, const char* argval) {
             }
         }
 
-        if (val < parent->minval || val > parent->maxval)
-            errorcode = ARG_ERR_RANGE;
-
         /* Safety check for integer overflow. WARNING: this check    */
         /* achieves nothing on machines where size(int)==size(long). */
         if (val > INT_MAX || val < INT_MIN)
@@ -200,6 +197,9 @@ static int arg_int_scanfn(struct arg_int* parent, const char* argval) {
                 val *= 1073741824; /* 1GB = 1024*1024*1024 */
         } else if (!detectsuffix(end, ""))
             errorcode = ARG_ERR_BADINT; /* invalid suffix detected */
+
+        if (val < parent->minval || val > parent->maxval)
+            errorcode = ARG_ERR_RANGE;
 
         /* if success then store result in parent->ival[] array */
         if (errorcode == 0)
