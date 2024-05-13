@@ -255,15 +255,15 @@ static void arg_int_errorfn(struct arg_int* parent, arg_dstr_t ds, int errorcode
 }
 
 struct arg_int* arg_int0(const char* shortopts, const char* longopts, const char* datatype, const char* glossary) {
-    return arg_rintn(shortopts, longopts, datatype, 0, 1, INT32_MIN, INT32_MAX, glossary);
+    return arg_rintn(shortopts, longopts, datatype, 0, 1, INT_MIN, INT_MAX, glossary);
 }
 
 struct arg_int* arg_int1(const char* shortopts, const char* longopts, const char* datatype, const char* glossary) {
-    return arg_rintn(shortopts, longopts, datatype, 1, 1, INT32_MIN, INT32_MAX, glossary);
+    return arg_rintn(shortopts, longopts, datatype, 1, 1, INT_MIN, INT_MAX, glossary);
 }
 
 struct arg_int* arg_intn(const char* shortopts, const char* longopts, const char* datatype, int mincount, int maxcount, const char* glossary) {
-    return arg_rintn(shortopts, longopts, datatype, mincount, maxcount, INT32_MIN, INT32_MAX, glossary);
+    return arg_rintn(shortopts, longopts, datatype, mincount, maxcount, INT_MIN, INT_MAX, glossary);
 }
 
 
