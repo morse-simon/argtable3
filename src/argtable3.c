@@ -57,7 +57,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-enum { GETOPT_SHUFFLE = 0, GETOPT_NOSHUFFLE = 1 };
+enum getopt_shuffle_flags { GETOPT_SHUFFLE = 0, GETOPT_NOSHUFFLE = 1 };
 
 static void arg_register_error(struct arg_end* end, void* parent, int error, const char* argval) {
     /* printf("arg_register_error(%p,%p,%d,%s)\n",end,parent,error,argval); */
@@ -188,7 +188,7 @@ static struct longoptions* alloc_longoptions(struct arg_hdr** table) {
     return result;
 }
 
-static char* alloc_shortoptions(struct arg_hdr** table, int shuffle) {
+static char* alloc_shortoptions(struct arg_hdr** table, enum getopt_shuffle_flags shuffle) {
     char* result;
     size_t len = 2;
     int tabindex;
@@ -207,10 +207,6 @@ static char* alloc_shortoptions(struct arg_hdr** table, int shuffle) {
     {
         /* Add a leading + so getopt doesn't reorder argv */
         *res++ = '+';
-    }
-    else
-    {
-        assert(GETOPT_SHUFFLE == shuffle);
     }
     /* add a leading ':' so getopt return codes distinguish    */
     /* unrecognised option and options missing argument values */
@@ -242,7 +238,7 @@ static int arg_endindex(struct arg_hdr** table) {
     return tabindex;
 }
 
-static void arg_parse_tagged(int argc, char** argv, struct arg_hdr** table, struct arg_end* endtable, int shuffle) {
+static void arg_parse_tagged(int argc, char** argv, struct arg_hdr** table, struct arg_end* endtable, enum getopt_shuffle_flags shuffle) {
     struct longoptions* longoptions;
     char* shortoptions;
     int copt;
