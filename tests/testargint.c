@@ -2007,6 +2007,28 @@ void test_argint_basic_057(CuTest* tc) {
     nerrors = arg_parse(argc, argv, argtable);
 
     CuAssertIntEquals(tc, nerrors, 1);
+    arg_print_errors(stdout, end, "test 057");
+
+    arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
+}
+
+void test_argint_basic_058(CuTest* tc) {
+    struct arg_int* a = arg_rint1(NULL, NULL, "a", 0, 1<<15, "a is <int>");
+    struct arg_int* b = arg_rint1(NULL, NULL, "b", 0, 6, "b is <int>");
+    struct arg_end* end = arg_end(20);
+    void* argtable[] = {a, b, end};
+    int nerrors;
+    int i;
+
+    char* argv[] = {"program", "32769", "5", NULL};
+    int argc = sizeof(argv) / sizeof(char*) - 1;
+
+    CuAssertTrue(tc, arg_nullcheck(argtable) == 0);
+
+    nerrors = arg_parse(argc, argv, argtable);
+
+    arg_print_errors(stdout, end, "test 058");
+    CuAssertIntEquals(tc, nerrors, 1);
 
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
@@ -2070,6 +2092,7 @@ CuSuite* get_argint_testsuite() {
     SUITE_ADD_TEST(suite, test_argint_basic_055);
     SUITE_ADD_TEST(suite, test_argint_basic_056);
     SUITE_ADD_TEST(suite, test_argint_basic_057);
+    SUITE_ADD_TEST(suite, test_argint_basic_058);
     return suite;
 }
 
