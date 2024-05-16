@@ -2007,7 +2007,6 @@ void test_argint_basic_057(CuTest* tc) {
     nerrors = arg_parse(argc, argv, argtable);
 
     CuAssertIntEquals(tc, nerrors, 1);
-    arg_print_errors(stdout, end, "test 057");
 
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
@@ -2027,7 +2026,6 @@ void test_argint_basic_058(CuTest* tc) {
 
     nerrors = arg_parse(argc, argv, argtable);
 
-    arg_print_errors(stdout, end, "test 058");
     CuAssertIntEquals(tc, nerrors, 1);
 
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
