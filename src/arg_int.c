@@ -186,7 +186,7 @@ static void arg_int_errorfn(struct arg_int* parent, arg_dstr_t ds, int errorcode
             break;
 
         case ARG_ERR_RANGE:
-            arg_dstr_catf(ds, "integer %s out of range (min: %d, max: %d) for option ", argval, parent->minval, parent->maxval);
+            arg_dstr_catf(ds, "integer %s out of range (%d-%d) for option ", argval, parent->minval, parent->maxval);
             arg_print_option_ds(ds, shortopts, longopts, datatype, "\n");
             break;
     }
