@@ -440,6 +440,13 @@ static void arg_parse_untagged(int argc, char** argv, struct arg_hdr** table, st
             /*printf("arg_parse_untagged(): argtable[%d] failed match\n",tabindex);*/
             tabindex++;
 
+            /* if we got a range error in an untagged option, we should bail out immediately  */
+            /* since we don't want to try and scan this option against any other rules */
+            if (errorcode == ARG_ERR_RANGE)
+            {
+                arg_register_error(endtable, parent, errorcode, argv[optind]);
+                return;
+            }
             /* remember this as a tentative error we may wish to reinstate later */
             errorlast = errorcode;
             optarglast = argv[optind];
