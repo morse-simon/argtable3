@@ -45,7 +45,6 @@ static void arg_int_resetfn(struct arg_int* parent) {
     parent->count = 0;
 }
 
-
 /* Returns 1 if str matches suffix (case insensitive).    */
 /* Str may contain trailing whitespace, but nothing else. */
 static int detectsuffix(const char* str, const char* suffix) {
@@ -187,7 +186,7 @@ static void arg_int_errorfn(struct arg_int* parent, arg_dstr_t ds, int errorcode
             break;
 
         case ARG_ERR_RANGE:
-            arg_dstr_catf(ds, "integer %d out of range (min: %d, max: %d)", argval, parent->minval, parent->maxval);
+            arg_dstr_catf(ds, "integer %s out of range (%d-%d) for option ", argval, parent->minval, parent->maxval);
             arg_print_option_ds(ds, shortopts, longopts, datatype, "\n");
             break;
     }

@@ -440,6 +440,13 @@ static void arg_parse_untagged(int argc, char** argv, struct arg_hdr** table, st
             /*printf("arg_parse_untagged(): argtable[%d] failed match\n",tabindex);*/
             tabindex++;
 
+            /* if we got a range error in an untagged option, we should bail out immediately  */
+            /* since we don't want to try and scan this option against any other rules */
+            if (errorcode == ARG_ERR_RANGE)
+            {
+                arg_register_error(endtable, parent, errorcode, argv[optind]);
+                return;
+            }
             /* remember this as a tentative error we may wish to reinstate later */
             errorlast = errorcode;
             optarglast = argv[optind];
@@ -1164,6 +1171,7 @@ void arg_freetable(void** argtable, size_t n) {
     };
 }
 
+#if 0
 #ifdef _WIN32
 BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved) {
     return TRUE;
@@ -1171,4 +1179,5 @@ BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved) {
     UNREFERENCED_PARAMETER(fdwReason);
     UNREFERENCED_PARAMETER(lpvReserved);
 }
+#endif
 #endif
