@@ -847,7 +847,7 @@ void arg_print_syntax_ds(arg_dstr_t ds, void** argtable, const char* suffix) {
 void arg_print_syntax(FILE* fp, void** argtable, const char* suffix) {
     arg_dstr_t ds = arg_dstr_create();
     arg_print_syntax_ds(ds, argtable, suffix);
-    fputs(arg_dstr_cstr(ds), fp);
+    arg_print_formatted(fp, 12, 85, arg_dstr_cstr(ds));
     arg_dstr_destroy(ds);
 }
 
@@ -933,6 +933,19 @@ void arg_print_glossary(FILE* fp, void** argtable, const char* format) {
     arg_dstr_destroy(ds);
 }
 
+static int bracket_depth(const char* text, int idx) {
+    int depth = 0;
+    for (int i = 0; i <= idx; i++) {
+        if (text[i] == '[' || text[i] == '(' || text[i] == '{') {
+            depth++;
+        }        
+        else if (text[i] == ']' || text[i] == ')' || text[i] == '}') {
+            depth--;
+        }
+    }
+    return depth;
+}
+
 /**
  * Print a piece of text formatted, which means in a column with a
  * left and a right margin. The lines are wrapped at whitspaces next
@@ -966,7 +979,7 @@ static void arg_print_formatted_ds(arg_dstr_t ds, const unsigned lmargin, const 
         if (line_end - line_start > colwidth) {
             line_end = line_start + colwidth;
 
-            while ((line_end > line_start) && !isspace((int)(*(text + line_end)))) {
+            while ((line_end > line_start) && !isspace((int)(*(text + line_end))) && (bracket_depth(text, line_end) != 0)) {
                 line_end--;
             }
 
