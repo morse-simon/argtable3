@@ -982,7 +982,9 @@ static void arg_print_formatted_ds(arg_dstr_t ds, const unsigned lmargin, const 
         if (line_end - line_start > colwidth) {
             line_end = line_start + colwidth;
 
-            while ((line_end > line_start) && !isspace((int)(*(text + line_end))) && (bracket_depth(text, line_end) != 0)) {
+            /* Search backwards from the end of the line until we reach a space character 
+             * that isn't surrounded by any brackets */
+            while ((line_end > line_start) && (!isspace((int)(*(text + line_end))) || (bracket_depth(text, line_end) != 0))) {
                 line_end--;
             }
 
