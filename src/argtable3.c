@@ -845,9 +845,12 @@ void arg_print_syntax_ds(arg_dstr_t ds, void** argtable, const char* suffix) {
 }
 
 void arg_print_syntax(FILE* fp, void** argtable, const char* suffix) {
+    const int lmargin = 12;
+    const int rmargin = 85;
+
     arg_dstr_t ds = arg_dstr_create();
     arg_print_syntax_ds(ds, argtable, suffix);
-    arg_print_formatted(fp, 12, 85, arg_dstr_cstr(ds));
+    arg_print_formatted(fp, lmargin, rmargin, arg_dstr_cstr(ds));
     arg_dstr_destroy(ds);
 }
 
