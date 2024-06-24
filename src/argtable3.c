@@ -939,10 +939,10 @@ void arg_print_glossary(FILE* fp, void** argtable, const char* format) {
 static int bracket_depth(const char* text, int idx) {
     int depth = 0;
     for (int i = 0; i <= idx; i++) {
-        if (text[i] == '[' || text[i] == '(' || text[i] == '{') {
+        if (text[i] == '[' || text[i] == '(' || text[i] == '{' || text[i] == '<') {
             depth++;
         }        
-        else if (text[i] == ']' || text[i] == ')' || text[i] == '}') {
+        else if (text[i] == ']' || text[i] == ')' || text[i] == '}' || text[i] == '>') {
             depth--;
         }
     }
