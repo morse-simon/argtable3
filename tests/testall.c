@@ -35,6 +35,7 @@
 CuSuite* get_arglit_testsuite();
 CuSuite* get_argstr_testsuite();
 CuSuite* get_argint_testsuite();
+CuSuite* get_argllong_testsuite();
 CuSuite* get_argdate_testsuite();
 CuSuite* get_argdbl_testsuite();
 CuSuite* get_argfile_testsuite();
@@ -53,6 +54,7 @@ int RunAllTests(void) {
     CuSuiteAddSuite(suite, get_arglit_testsuite());
     CuSuiteAddSuite(suite, get_argstr_testsuite());
     CuSuiteAddSuite(suite, get_argint_testsuite());
+    CuSuiteAddSuite(suite, get_argllong_testsuite());
     CuSuiteAddSuite(suite, get_argdate_testsuite());
     CuSuiteAddSuite(suite, get_argdbl_testsuite());
     CuSuiteAddSuite(suite, get_argfile_testsuite());
