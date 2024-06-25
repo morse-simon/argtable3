@@ -130,6 +130,12 @@ typedef struct arg_int {
     int* ival;          /* Array of parsed argument values */
 } arg_int_t;
 
+typedef struct arg_llong {
+    struct arg_hdr hdr;
+    int count;
+    long long int* ival;
+} arg_llong_t;
+
 /* Comma-separated integers, e.g. 1,2,3,4  */
 typedef struct arg_csi {
     struct arg_hdr hdr; /* The mandatory argtable header struct */
@@ -200,6 +206,10 @@ ARG_EXTERN struct arg_int* arg_intn(const char* shortopts, const char* longopts,
 ARG_EXTERN struct arg_int* arg_rint0(const char* shortopts, const char* longopts, const char* datatype, int minval, int maxval, const char* glossary);
 ARG_EXTERN struct arg_int* arg_rint1(const char* shortopts, const char* longopts, const char* datatype, int minval, int maxval, const char* glossary);
 ARG_EXTERN struct arg_int* arg_rintn(const char* shortopts, const char* longopts, const char* datatype, int mincount, int maxcount, int minval, int maxval, const char* glossary);
+
+ARG_EXTERN struct arg_llong* arg_llong0(const char* shortopts, const char* longopts, const char* datatype, const char* glossary);
+ARG_EXTERN struct arg_llong* arg_llong1(const char* shortopts, const char* longopts, const char* datatype, const char* glossary);
+ARG_EXTERN struct arg_llong* arg_llongn(const char* shortopts, const char* longopts, const char* datatype, int mincount, int maxcount, const char* glossary);
 
 /* Comma-separated integers, e.g. 1,2,3,4  */
 ARG_EXTERN struct arg_csi* arg_csi0(const char* shortopts, const char* longopts, const char* datatype, int num_args, const char* glossary);
