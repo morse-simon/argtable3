@@ -44,6 +44,7 @@ dist () {
       ../src/arg_file.c \
       ../src/arg_int.c \
       ../src/arg_csi.c \
+      ../src/arg_llong.c \
       ../src/arg_lit.c \
       ../src/arg_rem.c \
       ../src/arg_rex.c \

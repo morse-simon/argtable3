@@ -81,6 +81,7 @@ set(ARGTABLE3_SRC_FILES
   ${PROJECT_SOURCE_DIR}/src/arg_hashtable.c
   ${PROJECT_SOURCE_DIR}/src/arg_int.c
   ${PROJECT_SOURCE_DIR}/src/arg_lit.c
+  ${PROJECT_SOURCE_DIR}/src/arg_llong.c
   ${PROJECT_SOURCE_DIR}/src/arg_rem.c
   ${PROJECT_SOURCE_DIR}/src/arg_rex.c
   ${PROJECT_SOURCE_DIR}/src/arg_str.c

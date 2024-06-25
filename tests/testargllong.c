@@ -38,13 +38,13 @@
 #pragma warning(disable : 4204)
 #endif
 
-void test_argint_basic_001(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_001(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -68,13 +68,13 @@ void test_argint_basic_001(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_002(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_002(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -98,13 +98,13 @@ void test_argint_basic_002(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_003(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_003(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -129,13 +129,13 @@ void test_argint_basic_003(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_004(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_004(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -162,13 +162,13 @@ void test_argint_basic_004(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_005(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_005(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -194,13 +194,13 @@ void test_argint_basic_005(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_006(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_006(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -227,13 +227,13 @@ void test_argint_basic_006(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_007(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_007(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -260,13 +260,13 @@ void test_argint_basic_007(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_008(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_008(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -294,13 +294,13 @@ void test_argint_basic_008(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_009(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_009(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -330,13 +330,13 @@ void test_argint_basic_009(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_010(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_010(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -367,13 +367,13 @@ void test_argint_basic_010(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_011(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_011(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -405,13 +405,13 @@ void test_argint_basic_011(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_012(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_012(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -444,13 +444,13 @@ void test_argint_basic_012(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_013(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_013(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -480,13 +480,13 @@ void test_argint_basic_013(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_014(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_014(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -516,13 +516,13 @@ void test_argint_basic_014(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_015(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_015(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -552,13 +552,13 @@ void test_argint_basic_015(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_016(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_016(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -589,13 +589,13 @@ void test_argint_basic_016(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_017(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_017(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -628,13 +628,13 @@ void test_argint_basic_017(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_018(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_018(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -666,13 +666,13 @@ void test_argint_basic_018(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_019(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_019(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -702,13 +702,13 @@ void test_argint_basic_019(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_020(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_020(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -738,13 +738,13 @@ void test_argint_basic_020(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_021(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_021(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -775,13 +775,13 @@ void test_argint_basic_021(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_022(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_022(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -814,13 +814,13 @@ void test_argint_basic_022(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_023(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_023(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -852,13 +852,13 @@ void test_argint_basic_023(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_024(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_024(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -888,13 +888,13 @@ void test_argint_basic_024(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_025(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_025(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -924,13 +924,13 @@ void test_argint_basic_025(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_026(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_026(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -960,13 +960,13 @@ void test_argint_basic_026(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_027(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_027(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -997,13 +997,13 @@ void test_argint_basic_027(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_028(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_028(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1034,13 +1034,13 @@ void test_argint_basic_028(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_029(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_029(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1073,13 +1073,13 @@ void test_argint_basic_029(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_030(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_030(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1111,13 +1111,13 @@ void test_argint_basic_030(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_031(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_031(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1151,19 +1151,19 @@ void test_argint_basic_031(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_032(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_032(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
     int i;
 
-    char* argv[] = {"program", "1KB", NULL};
+    char* argv[] = {"program", "1024", NULL};
     int argc = sizeof(argv) / sizeof(char*) - 1;
 
     /* allow missing argument values for the f argument, and set defaults to -1 */
@@ -1187,19 +1187,19 @@ void test_argint_basic_032(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_033(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_033(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
     int i;
 
-    char* argv[] = {"program", "1MB", NULL};
+    char* argv[] = {"program", "1048576", NULL};
     int argc = sizeof(argv) / sizeof(char*) - 1;
 
     /* allow missing argument values for the f argument, and set defaults to -1 */
@@ -1223,19 +1223,19 @@ void test_argint_basic_033(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_034(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_034(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
     int i;
 
-    char* argv[] = {"program", "1GB", NULL};
+    char* argv[] = {"program", "1073741824", NULL};
     int argc = sizeof(argv) / sizeof(char*) - 1;
 
     /* allow missing argument values for the f argument, and set defaults to -1 */
@@ -1259,52 +1259,13 @@ void test_argint_basic_034(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_035(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
-    struct arg_end* end = arg_end(20);
-    void* argtable[] = {a, b, c, d, e, f, end};
-    int nerrors;
-    int i;
-
-    char* argv[] = {"program", "0x5KB", "0xAMB", "0x1GB", "-d", "-0x40A01400", NULL};
-    int argc = sizeof(argv) / sizeof(char*) - 1;
-
-    /* allow missing argument values for the f argument, and set defaults to -1 */
-    f->hdr.flag |= ARG_HASOPTVALUE;
-    for (i = 0; i < f->hdr.maxcount; i++)
-        f->ival[i] = -1;
-
-    CuAssertTrue(tc, arg_nullcheck(argtable) == 0);
-
-    nerrors = arg_parse(argc, argv, argtable);
-
-    CuAssertIntEquals(tc, nerrors, 0);
-    CuAssertIntEquals(tc, a->count, 1);
-    CuAssertIntEquals(tc, a->ival[0], 0x5 * 1024);
-    CuAssertIntEquals(tc, b->count, 1);
-    CuAssertIntEquals(tc, b->ival[0], 0xA * 1024 * 1024);
-    CuAssertIntEquals(tc, c->count, 1);
-    CuAssertIntEquals(tc, c->ival[0], 0x1 * 1024 * 1024 * 1024);
-    CuAssertIntEquals(tc, d->count, 1);
-    CuAssertIntEquals(tc, d->ival[0], -0x40A01400);
-    CuAssertIntEquals(tc, e->count, 0);
-    CuAssertIntEquals(tc, f->count, 0);
-
-    arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
-}
-
-void test_argint_basic_036(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_036(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1333,13 +1294,13 @@ void test_argint_basic_036(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_037(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_037(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1371,13 +1332,13 @@ void test_argint_basic_037(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_038(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_038(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1412,13 +1373,13 @@ void test_argint_basic_038(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_039(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_039(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1453,13 +1414,13 @@ void test_argint_basic_039(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_040(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_040(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1493,13 +1454,13 @@ void test_argint_basic_040(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_041(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_041(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1532,13 +1493,13 @@ void test_argint_basic_041(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_042(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_042(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1570,13 +1531,13 @@ void test_argint_basic_042(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_043(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_043(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1599,13 +1560,13 @@ void test_argint_basic_043(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_044(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_044(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1638,13 +1599,13 @@ void test_argint_basic_044(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_045(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_045(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1673,13 +1634,13 @@ void test_argint_basic_045(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_046(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_046(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1708,13 +1669,13 @@ void test_argint_basic_046(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_047(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_047(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1744,13 +1705,13 @@ void test_argint_basic_047(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_048(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_048(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1780,13 +1741,13 @@ void test_argint_basic_048(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_049(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_049(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1809,13 +1770,13 @@ void test_argint_basic_049(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_050(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_050(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1838,13 +1799,13 @@ void test_argint_basic_050(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_051(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_051(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1867,13 +1828,13 @@ void test_argint_basic_051(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_052(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_052(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1896,13 +1857,13 @@ void test_argint_basic_052(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_053(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_053(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1925,13 +1886,13 @@ void test_argint_basic_053(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_054(CuTest* tc) {
-    struct arg_int* a = arg_int1(NULL, NULL, "a", "a is <int>");
-    struct arg_int* b = arg_int0(NULL, NULL, "b", "b is <int>");
-    struct arg_int* c = arg_int0(NULL, NULL, "c", "c is <int>");
-    struct arg_int* d = arg_intn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
-    struct arg_int* e = arg_int0(NULL, "eps,eqn", "<int>", "eps is optional");
-    struct arg_int* f = arg_intn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
+void test_argllong_basic_054(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
     void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
@@ -1954,143 +1915,93 @@ void test_argint_basic_054(CuTest* tc) {
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_055(CuTest* tc) {
-    struct arg_int* a = arg_rint0(NULL, NULL, "a", 0, 5, "a is <int>");
+void test_argllong_basic_055(CuTest* tc) {
+    struct arg_llong* a = arg_llong1(NULL, NULL, "a", "a is <int>");
+    struct arg_llong* b = arg_llong0(NULL, NULL, "b", "b is <int>");
+    struct arg_llong* c = arg_llong0(NULL, NULL, "c", "c is <int>");
+    struct arg_llong* d = arg_llongn("dD", "delta", "<int>", 0, 3, "d can occur 0..3 times");
+    struct arg_llong* e = arg_llong0(NULL, "eps,eqn", "<int>", "eps is optional");
+    struct arg_llong* f = arg_llongn("fF", "filler", "<int>", 0, 3, "f can occur 0..3 times");
     struct arg_end* end = arg_end(20);
-    void* argtable[] = {a, end};
+    void* argtable[] = {a, b, c, d, e, f, end};
     int nerrors;
-    int i;
 
-    char* argv[] = {"program", "0", NULL};
+    char* argv[] = {"program", "9223372036854775806", NULL};
     int argc = sizeof(argv) / sizeof(char*) - 1;
 
     CuAssertTrue(tc, arg_nullcheck(argtable) == 0);
 
     nerrors = arg_parse(argc, argv, argtable);
 
-    CuAssertIntEquals(tc, nerrors, 0);
+    CuAssertTrue(tc, nerrors == 0);
+    CuAssertTrue(tc, a->count == 1);
+    /* Promote to double here to avoid int overflow */
+    CuAssertDblEquals(tc, a->ival[0], 9223372036854775806, 0.5);
+    CuAssertTrue(tc, b->count == 0);
+    CuAssertTrue(tc, c->count == 0);
+    CuAssertTrue(tc, d->count == 0);
+    CuAssertTrue(tc, e->count == 0);
+    CuAssertTrue(tc, f->count == 0);
 
     arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 }
 
-void test_argint_basic_056(CuTest* tc) {
-    struct arg_int* a = arg_rint0(NULL, NULL, "a", 0, 5, "a is <int>");
-    struct arg_end* end = arg_end(20);
-    void* argtable[] = {a, end};
-    int nerrors;
-    int i;
-
-    char* argv[] = {"program", "5", NULL};
-    int argc = sizeof(argv) / sizeof(char*) - 1;
-
-    CuAssertTrue(tc, arg_nullcheck(argtable) == 0);
-
-    nerrors = arg_parse(argc, argv, argtable);
-
-    CuAssertIntEquals(tc, nerrors, 0);
-
-    arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
-}
-
-void test_argint_basic_057(CuTest* tc) {
-    struct arg_int* a = arg_rint0(NULL, NULL, "a", 0, 5, "a is <int>");
-    struct arg_end* end = arg_end(20);
-    void* argtable[] = {a, end};
-    int nerrors;
-    int i;
-
-    char* argv[] = {"program", "6", NULL};
-    int argc = sizeof(argv) / sizeof(char*) - 1;
-
-    CuAssertTrue(tc, arg_nullcheck(argtable) == 0);
-
-    nerrors = arg_parse(argc, argv, argtable);
-
-    CuAssertIntEquals(tc, nerrors, 1);
-
-    arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
-}
-
-void test_argint_basic_058(CuTest* tc) {
-    struct arg_int* a = arg_rint1(NULL, NULL, "a", 0, 1<<15, "a is <int>");
-    struct arg_int* b = arg_rint1(NULL, NULL, "b", 0, 6, "b is <int>");
-    struct arg_end* end = arg_end(20);
-    void* argtable[] = {a, b, end};
-    int nerrors;
-    int i;
-
-    char* argv[] = {"program", "32769", "5", NULL};
-    int argc = sizeof(argv) / sizeof(char*) - 1;
-
-    CuAssertTrue(tc, arg_nullcheck(argtable) == 0);
-
-    nerrors = arg_parse(argc, argv, argtable);
-
-    CuAssertIntEquals(tc, nerrors, 1);
-
-    arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
-}
-
-CuSuite* get_argint_testsuite() {
+CuSuite* get_argllong_testsuite() {
     CuSuite* suite = CuSuiteNew();
-    SUITE_ADD_TEST(suite, test_argint_basic_001);
-    SUITE_ADD_TEST(suite, test_argint_basic_002);
-    SUITE_ADD_TEST(suite, test_argint_basic_003);
-    SUITE_ADD_TEST(suite, test_argint_basic_004);
-    SUITE_ADD_TEST(suite, test_argint_basic_005);
-    SUITE_ADD_TEST(suite, test_argint_basic_006);
-    SUITE_ADD_TEST(suite, test_argint_basic_007);
-    SUITE_ADD_TEST(suite, test_argint_basic_008);
-    SUITE_ADD_TEST(suite, test_argint_basic_009);
-    SUITE_ADD_TEST(suite, test_argint_basic_010);
-    SUITE_ADD_TEST(suite, test_argint_basic_011);
-    SUITE_ADD_TEST(suite, test_argint_basic_012);
-    SUITE_ADD_TEST(suite, test_argint_basic_013);
-    SUITE_ADD_TEST(suite, test_argint_basic_014);
-    SUITE_ADD_TEST(suite, test_argint_basic_015);
-    SUITE_ADD_TEST(suite, test_argint_basic_016);
-    SUITE_ADD_TEST(suite, test_argint_basic_017);
-    SUITE_ADD_TEST(suite, test_argint_basic_018);
-    SUITE_ADD_TEST(suite, test_argint_basic_019);
-    SUITE_ADD_TEST(suite, test_argint_basic_020);
-    SUITE_ADD_TEST(suite, test_argint_basic_021);
-    SUITE_ADD_TEST(suite, test_argint_basic_022);
-    SUITE_ADD_TEST(suite, test_argint_basic_023);
-    SUITE_ADD_TEST(suite, test_argint_basic_024);
-    SUITE_ADD_TEST(suite, test_argint_basic_025);
-    SUITE_ADD_TEST(suite, test_argint_basic_026);
-    SUITE_ADD_TEST(suite, test_argint_basic_027);
-    SUITE_ADD_TEST(suite, test_argint_basic_028);
-    SUITE_ADD_TEST(suite, test_argint_basic_029);
-    SUITE_ADD_TEST(suite, test_argint_basic_030);
-    SUITE_ADD_TEST(suite, test_argint_basic_031);
-    SUITE_ADD_TEST(suite, test_argint_basic_032);
-    SUITE_ADD_TEST(suite, test_argint_basic_033);
-    SUITE_ADD_TEST(suite, test_argint_basic_034);
-    SUITE_ADD_TEST(suite, test_argint_basic_035);
-    SUITE_ADD_TEST(suite, test_argint_basic_036);
-    SUITE_ADD_TEST(suite, test_argint_basic_037);
-    SUITE_ADD_TEST(suite, test_argint_basic_038);
-    SUITE_ADD_TEST(suite, test_argint_basic_039);
-    SUITE_ADD_TEST(suite, test_argint_basic_040);
-    SUITE_ADD_TEST(suite, test_argint_basic_041);
-    SUITE_ADD_TEST(suite, test_argint_basic_042);
-    SUITE_ADD_TEST(suite, test_argint_basic_043);
-    SUITE_ADD_TEST(suite, test_argint_basic_044);
-    SUITE_ADD_TEST(suite, test_argint_basic_045);
-    SUITE_ADD_TEST(suite, test_argint_basic_046);
-    SUITE_ADD_TEST(suite, test_argint_basic_047);
-    SUITE_ADD_TEST(suite, test_argint_basic_048);
-    SUITE_ADD_TEST(suite, test_argint_basic_049);
-    SUITE_ADD_TEST(suite, test_argint_basic_050);
-    SUITE_ADD_TEST(suite, test_argint_basic_051);
-    SUITE_ADD_TEST(suite, test_argint_basic_052);
-    SUITE_ADD_TEST(suite, test_argint_basic_053);
-    SUITE_ADD_TEST(suite, test_argint_basic_054);
-    SUITE_ADD_TEST(suite, test_argint_basic_055);
-    SUITE_ADD_TEST(suite, test_argint_basic_056);
-    SUITE_ADD_TEST(suite, test_argint_basic_057);
-    SUITE_ADD_TEST(suite, test_argint_basic_058);
+    SUITE_ADD_TEST(suite, test_argllong_basic_001);
+    SUITE_ADD_TEST(suite, test_argllong_basic_002);
+    SUITE_ADD_TEST(suite, test_argllong_basic_003);
+    SUITE_ADD_TEST(suite, test_argllong_basic_004);
+    SUITE_ADD_TEST(suite, test_argllong_basic_005);
+    SUITE_ADD_TEST(suite, test_argllong_basic_006);
+    SUITE_ADD_TEST(suite, test_argllong_basic_007);
+    SUITE_ADD_TEST(suite, test_argllong_basic_008);
+    SUITE_ADD_TEST(suite, test_argllong_basic_009);
+    SUITE_ADD_TEST(suite, test_argllong_basic_010);
+    SUITE_ADD_TEST(suite, test_argllong_basic_011);
+    SUITE_ADD_TEST(suite, test_argllong_basic_012);
+    SUITE_ADD_TEST(suite, test_argllong_basic_013);
+    SUITE_ADD_TEST(suite, test_argllong_basic_014);
+    SUITE_ADD_TEST(suite, test_argllong_basic_015);
+    SUITE_ADD_TEST(suite, test_argllong_basic_016);
+    SUITE_ADD_TEST(suite, test_argllong_basic_017);
+    SUITE_ADD_TEST(suite, test_argllong_basic_018);
+    SUITE_ADD_TEST(suite, test_argllong_basic_019);
+    SUITE_ADD_TEST(suite, test_argllong_basic_020);
+    SUITE_ADD_TEST(suite, test_argllong_basic_021);
+    SUITE_ADD_TEST(suite, test_argllong_basic_022);
+    SUITE_ADD_TEST(suite, test_argllong_basic_023);
+    SUITE_ADD_TEST(suite, test_argllong_basic_024);
+    SUITE_ADD_TEST(suite, test_argllong_basic_025);
+    SUITE_ADD_TEST(suite, test_argllong_basic_026);
+    SUITE_ADD_TEST(suite, test_argllong_basic_027);
+    SUITE_ADD_TEST(suite, test_argllong_basic_028);
+    SUITE_ADD_TEST(suite, test_argllong_basic_029);
+    SUITE_ADD_TEST(suite, test_argllong_basic_030);
+    SUITE_ADD_TEST(suite, test_argllong_basic_031);
+    SUITE_ADD_TEST(suite, test_argllong_basic_032);
+    SUITE_ADD_TEST(suite, test_argllong_basic_033);
+    SUITE_ADD_TEST(suite, test_argllong_basic_034);
+    SUITE_ADD_TEST(suite, test_argllong_basic_036);
+    SUITE_ADD_TEST(suite, test_argllong_basic_037);
+    SUITE_ADD_TEST(suite, test_argllong_basic_038);
+    SUITE_ADD_TEST(suite, test_argllong_basic_039);
+    SUITE_ADD_TEST(suite, test_argllong_basic_040);
+    SUITE_ADD_TEST(suite, test_argllong_basic_041);
+    SUITE_ADD_TEST(suite, test_argllong_basic_042);
+    SUITE_ADD_TEST(suite, test_argllong_basic_043);
+    SUITE_ADD_TEST(suite, test_argllong_basic_044);
+    SUITE_ADD_TEST(suite, test_argllong_basic_045);
+    SUITE_ADD_TEST(suite, test_argllong_basic_046);
+    SUITE_ADD_TEST(suite, test_argllong_basic_047);
+    SUITE_ADD_TEST(suite, test_argllong_basic_048);
+    SUITE_ADD_TEST(suite, test_argllong_basic_049);
+    SUITE_ADD_TEST(suite, test_argllong_basic_050);
+    SUITE_ADD_TEST(suite, test_argllong_basic_051);
+    SUITE_ADD_TEST(suite, test_argllong_basic_052);
+    SUITE_ADD_TEST(suite, test_argllong_basic_053);
+    SUITE_ADD_TEST(suite, test_argllong_basic_054);
+    SUITE_ADD_TEST(suite, test_argllong_basic_055);
     return suite;
 }
 

@@ -121,6 +121,7 @@ extern void* xcalloc(size_t count, size_t size);
 extern void* xrealloc(void* ptr, size_t size);
 extern void xfree(void* ptr);
 extern long int strtol0X(const char* str, const char** endptr, char X, int base);
+extern long long int strtoll0X(const char* str, const char** endptr, char X, int base);
 
 struct arg_hashtable_entry {
     void *k, *v;
