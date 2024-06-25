@@ -45,6 +45,7 @@ set(TEST_PUBLIC_SRC_FILES
   testarglit.c
   testargstr.c
   testargint.c
+  testargllong.c
   testargdate.c
   testargdbl.c
   testargfile.c
