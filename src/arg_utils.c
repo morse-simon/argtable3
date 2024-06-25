@@ -238,3 +238,55 @@ long int strtol0X(const char* str, const char** endptr, char X, int base) {
     /* success */
     return s * val;
 }
+
+long long int strtoll0X(const char* str, const char** endptr, char X, int base) {
+    long long int val;          /* stores result */
+    int s = 1;             /* sign is +1 or -1 */
+    const char* ptr = str; /* ptr to current position in str */
+
+    /* skip leading whitespace */
+    while (isspace((int)(*ptr)))
+        ptr++;
+    /* printf("1) %s\n",ptr); */
+
+    /* scan optional sign character */
+    switch (*ptr) {
+        case '+':
+            ptr++;
+            s = 1;
+            break;
+        case '-':
+            ptr++;
+            s = -1;
+            break;
+        default:
+            s = 1;
+            break;
+    }
+    /* printf("2) %s\n",ptr); */
+
+    /* '0X' prefix */
+    if ((*ptr++) != '0') {
+        /* printf("failed to detect '0'\n"); */
+        *endptr = str;
+        return 0;
+    }
+    /* printf("3) %s\n",ptr); */
+    if (toupper(*ptr++) != toupper(X)) {
+        /* printf("failed to detect '%c'\n",X); */
+        *endptr = str;
+        return 0;
+    }
+    /* printf("4) %s\n",ptr); */
+
+    /* attempt conversion on remainder of string using strtol() */
+    val = strtoll(ptr, (char**)endptr, base);
+    if (*endptr == ptr) {
+        /* conversion failed */
+        *endptr = str;
+        return 0;
+    }
+
+    /* success */
+    return s * val;
+}
