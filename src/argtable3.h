@@ -54,7 +54,7 @@ extern "C" {
 #endif /* ARG_CMD_DESCRIPTION_LEN */
 
 /* bit masks for arg_hdr.flag */
-enum { ARG_TERMINATOR = 0x1, ARG_HASVALUE = 0x2, ARG_HASOPTVALUE = 0x4, ARG_STOPPARSE = 0x8 };
+enum { ARG_TERMINATOR = 0x1, ARG_HASVALUE = 0x2, ARG_HASOPTVALUE = 0x4, ARG_STOPPARSE = 0x8, ARG_REM = 0x10 };
 
 #if defined(_WIN32)
   #if defined(argtable3_EXPORTS)

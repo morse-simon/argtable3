@@ -82,14 +82,9 @@ static int arg_llong_scanfn(struct arg_llong* parent, const char* argval) {
 
         /* Check that strtoll consumed entire buffer (1.234 would leave end pointing to ".234") */
         if (*end != '\0')
-        { 
+        {
             return ARG_ERR_BADINT;
         }
-
-        /* Safety check for integer overflow. WARNING: this check    */
-        /* achieves nothing on machines where size(int)==size(long). */
-        if (val > LLONG_MAX || val < LLONG_MIN)
-            errorcode = ARG_ERR_OVERFLOW;
 
         /* if success then store result in parent->ival[] array */
         if (errorcode == 0)
