@@ -41,7 +41,7 @@
 struct arg_rem* arg_rem(const char* datatype, const char* glossary) {
     struct arg_rem* result = (struct arg_rem*)xmalloc(sizeof(struct arg_rem));
 
-    result->hdr.flag = 0;
+    result->hdr.flag = ARG_REM;
     result->hdr.shortopts = NULL;
     result->hdr.longopts = NULL;
     result->hdr.datatype = datatype;

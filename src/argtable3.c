@@ -440,6 +440,13 @@ static void arg_parse_untagged(int argc, char** argv, struct arg_hdr** table, st
             /*printf("arg_parse_untagged(): argtable[%d] failed match\n",tabindex);*/
             tabindex++;
 
+            /* if we got a range error in an untagged option, we should bail out immediately  */
+            /* since we don't want to try and scan this option against any other rules */
+            if (errorcode == ARG_ERR_RANGE)
+            {
+                arg_register_error(endtable, parent, errorcode, argv[optind]);
+                return;
+            }
             /* remember this as a tentative error we may wish to reinstate later */
             errorlast = errorcode;
             optarglast = argv[optind];
@@ -769,6 +776,10 @@ static void arg_print_gnuswitch_ds(arg_dstr_t ds, struct arg_hdr** table) {
         if (table[tabindex]->flag & ARG_HASVALUE)
             continue;
 
+        /* skip -h flag */
+        if (table[tabindex]->shortopts[0] == 'h')
+            continue;
+
         /* print first short option */
         arg_dstr_catf(ds, format2, table[tabindex]->shortopts[0]);
         format2 = "%c";
@@ -792,6 +803,9 @@ void arg_print_syntax_ds(arg_dstr_t ds, void** argtable, const char* suffix) {
 
         /* skip short options without arg values (they were printed by arg_print_gnu_switch) */
         if (table[tabindex]->shortopts && !(table[tabindex]->flag & ARG_HASVALUE))
+            continue;
+
+        if (table[tabindex]->flag & ARG_REM)
             continue;
 
         shortopts = table[tabindex]->shortopts;
@@ -838,9 +852,16 @@ void arg_print_syntax_ds(arg_dstr_t ds, void** argtable, const char* suffix) {
 }
 
 void arg_print_syntax(FILE* fp, void** argtable, const char* suffix) {
+    const int lmargin = 12;
+    const int rmargin = 85;
+
     arg_dstr_t ds = arg_dstr_create();
     arg_print_syntax_ds(ds, argtable, suffix);
-    fputs(arg_dstr_cstr(ds), fp);
+    if (arg_dstr_cstr(ds)[0] != '\n')
+    {
+        fputs(" ", fp);
+    }
+    arg_print_formatted(fp, lmargin, rmargin, arg_dstr_cstr(ds));
     arg_dstr_destroy(ds);
 }
 
@@ -914,7 +935,17 @@ void arg_print_glossary_ds(arg_dstr_t ds, void** argtable, const char* format) {
             const char* datatype = table[tabindex]->datatype;
             const char* glossary = table[tabindex]->glossary;
             arg_cat_optionv(syntax, sizeof(syntax) - 1, shortopts, longopts, datatype, table[tabindex]->flag & ARG_HASOPTVALUE, ", ");
-            arg_dstr_catf(ds, format, syntax, glossary);
+            /* For long syntax lines that would cause the glossary to become unaligned.
+             * Prints the glossary on the line below with the correct alignment */
+            if (strlen(syntax) >= 28)
+            {
+                arg_dstr_catf(ds, "        %-30s\n", syntax);
+                arg_dstr_catf(ds, "        %-30s%s\n", "", glossary);
+            }
+            else
+            {
+                arg_dstr_catf(ds, format, syntax, glossary);
+            }
         }
     }
 }
@@ -924,6 +955,19 @@ void arg_print_glossary(FILE* fp, void** argtable, const char* format) {
     arg_print_glossary_ds(ds, argtable, format);
     fputs(arg_dstr_cstr(ds), fp);
     arg_dstr_destroy(ds);
+}
+
+static int bracket_depth(const char* text, int idx) {
+    int depth = 0;
+    for (int i = 0; i <= idx; i++) {
+        if (text[i] == '[' || text[i] == '(' || text[i] == '{' || text[i] == '<') {
+            depth++;
+        }
+        else if (text[i] == ']' || text[i] == ')' || text[i] == '}' || text[i] == '>') {
+            depth--;
+        }
+    }
+    return depth;
 }
 
 /**
@@ -959,7 +1003,9 @@ static void arg_print_formatted_ds(arg_dstr_t ds, const unsigned lmargin, const 
         if (line_end - line_start > colwidth) {
             line_end = line_start + colwidth;
 
-            while ((line_end > line_start) && !isspace((int)(*(text + line_end)))) {
+            /* Search backwards from the end of the line until we reach a space character
+             * that isn't surrounded by any brackets */
+            while ((line_end > line_start) && (!isspace((int)(*(text + line_end))) || (bracket_depth(text, line_end) != 0))) {
                 line_end--;
             }
 
@@ -1164,6 +1210,7 @@ void arg_freetable(void** argtable, size_t n) {
     };
 }
 
+#if 0
 #ifdef _WIN32
 BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved) {
     return TRUE;
@@ -1171,4 +1218,5 @@ BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved) {
     UNREFERENCED_PARAMETER(fdwReason);
     UNREFERENCED_PARAMETER(lpvReserved);
 }
+#endif
 #endif

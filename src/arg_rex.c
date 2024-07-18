@@ -195,7 +195,7 @@ static void arg_rex_errorfn(struct arg_rex* parent, arg_dstr_t ds, int errorcode
             break;
 
         case ARG_ERR_REGNOMATCH:
-            arg_dstr_cat(ds, "illegal value  ");
+            arg_dstr_cat(ds, "illegal value ");
             arg_print_option_ds(ds, shortopts, longopts, argval, "\n");
             break;
 
